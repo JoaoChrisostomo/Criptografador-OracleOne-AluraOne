@@ -2,42 +2,59 @@ function criptografar() {
   acao();
 }
 
-const inserirTexto = document.getElementById("#input-texto");
+const inserirTexto = document.getElementById("input-texto");
 const btnCriptografar = document.getElementById("btn-criptografar");
 const btnDescriptografar = document.getElementById("btn-descriptografar");
 const inputTexto = document.getElementById("btn-copy");
 const copiarTexto = document.getElementById("copiar-text");
 
-document.addEventListener("click", function() {
-    alert("texto inválido");
+document.addEventListener("click", function (event) {
+  event.preventDefault();
+  let button = event.target.value;
+
+  if (button == "CRIPTOGRAFAR!") {
+    criptografador();
+  } else if (button == "DESCRIPTOGRAFAR!") {
+    descriptografar();
+  } else if (button == "COPIAR") {
+    copiar();
+  }
 });
 
 function criptografador() {
-
-  let valorTexto = texto.value;
+  let valorTexto = inserirTexto.value;
   let resultado = valorTexto
-    .replace(/i/gi, "imes")
     .replace(/e/gi, "enter")
+    .replace(/i/gi, "imes")
     .replace(/a/gi, "ai")
     .replace(/o/gi, "ober")
     .replace(/u/gi, "ufat");
-  resultado.value = resultado;
+  copiarTexto.value = resultado;
 }
 
-
 function descriptografar() {
-  let textoValor = texto.value;
-  let wordsKeys = ["enter", "imes", "ai", "ober", "ufat"];
-  let verify = wordsKeys.some((e) => textoValor.includes(e));
-  if (!verify) {
-    alert("O texto não está codificado!");
+  let textoValor = inserirTexto.value;
+  let resultado = textoValor
+    .replace(/enter/gi, "e")
+    .replace(/imes/gi, "i")
+    .replace(/ai/gi, "a")
+    .replace(/ober/gi, "o")
+    .replace(/ufat/gi, "u");
+  copiarTexto.value = resultado;
+}
+
+function copiar() {
+  var content = copiarTexto.value;
+
+  if (content != "") {
+    navigator.clipboard
+      .writeText(content)
+      .then(() => {
+        alert("texto");
+      })
+      .catch((erro) => {
+        alert("regra invalida");
+      });
   } else {
-    let res = textoValor
-      .replace(/enter/gi, "e")
-      .replace(/imes/gi, "i")
-      .replace(/ai/gi, "a")
-      .replace(/ober/gi, "o")
-      .replace(/ufat/gi, "u");
-    resultado.value = res;
   }
 }
