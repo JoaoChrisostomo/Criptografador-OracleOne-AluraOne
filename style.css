@@ -12,7 +12,7 @@ body {
 }
 
 .main {
-  width: 80vw;
+  width: 100vw;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -20,21 +20,21 @@ body {
 }
 
 .titulo {
-  padding: 100px;
-  width: 40vw;
+  padding: 50px;
   margin: auto;
   text-align: center;
 }
 
-.box {
+.box{
+  width: 400px;
+  height: 350px;
   padding: 50px;
   margin: 0 10px 0 10px;
   box-shadow: 2px 2px 2px 1px rgba(2, 1, 8, 0.2);
   background-image: linear-gradient(-45deg, #2B86C5,  #784BA0, #23a6d5, #23d5ab);
   border-radius: 0.5em;
-  width: 25vw;
-  height: auto;
   text-align: center;
+  justify-content: center;
 }
 
 .btn {
@@ -55,7 +55,10 @@ body {
   width: 100%;
   height: 50px;
 }
-
+.redes-sociais {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .texto h2 {
   text-align: center;
 }
@@ -68,13 +71,10 @@ body {
   text-align: center;
 }
 .s-m{
-  position: absolute;
-  top: 80%;
-  left: 90%;
   transform: translate(-530%);
 }
 
-.s-m a{
+ a{
   display: inline-flex;
   width: 40px;
   height: 40px;
@@ -107,4 +107,14 @@ body {
   top: 70%;
   left: 90%;
   transform: translate(-895%);
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background: rgb(0, 238, 255);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
 }
