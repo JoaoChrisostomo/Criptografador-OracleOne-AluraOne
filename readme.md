@@ -29,7 +29,7 @@
 
 <br>
 
-  ### Pré-requisitos
+  ### Pre-requisitos
   Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
   [VScode, HTML e JavaScript] (https://www.youtube.com/watch?v=UForX7ehChM).
 
