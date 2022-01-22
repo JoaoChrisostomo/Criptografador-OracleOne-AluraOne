@@ -10,7 +10,7 @@
 <p align="center">
  <a href= "#Sobre">Sobre</a> =
  <a href= "#Tecnologias">Tecnologias</a> =
- <a href= "#Pre-requisito">Pre-requisito</a> =
+ <a href= "#Pre-requisito">Pre-requisitos</a> =
  <a href= "#Autor">Autor</a>
 </p>
 
@@ -36,7 +36,7 @@
 
 <br>
 
-  ### Pré-requisitos
+  ### Pre-requisitos
   Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
   [VScode, HTML e JavaScript] (https://www.youtube.com/watch?v=UForX7ehChM).
 
