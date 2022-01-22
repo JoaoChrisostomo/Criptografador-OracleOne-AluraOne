@@ -7,7 +7,7 @@
 <p align="center">
  <a href= "#Sobre">Sobre</a> =
  <a href= "#Tecnologias">Tecnologias</a> =
- <a href= "#Pre-requisito">Pre-requisito</a> =
+ <a href= "#Pre-requisitos">Pre-requisito</a> =
  <a href= "#Licença">Licença</a> =
  <a href= "#Autor">Autor</a>
 </p>
