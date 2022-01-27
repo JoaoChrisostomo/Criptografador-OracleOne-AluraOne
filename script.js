@@ -6,22 +6,9 @@ const copiarTexto = document.getElementById("copiar-text");
 const alertRed = document.getElementById("alert");
 const qualquerNome = document.getElementById("qualquer");
 
-document.addEventListener("click", function (event) {
-  event.preventDefault();
-  let button = event.target.value;
-
-  if (button == "criptografar") {
-    criptografador();
-  } else if (button == "descriptografar") {
-    descriptografar();
-  } else if (button == "copiar") {
-    copiar();
-  }
-});
-
 function criptografador() {
-  var mensagem = document.getElementById('sucesso')
-  mensagem.style.display = "block"
+  var mensagem = document.getElementById("sucesso");
+  mensagem.style.display = "block";
 
   let valorTexto = inserirTexto.value;
   let resultado = valorTexto
@@ -50,8 +37,8 @@ inserirTexto.addEventListener("input", function (event) {
 });
 
 function descriptografar() {
-  var mensagem = document.getElementById('sucesso')
-  mensagem.style.display = "none"
+  var mensagem = document.getElementById("sucesso");
+  mensagem.style.display = "none";
   let textoValor = inserirTexto.value;
   let resultado = textoValor
     .replace(/enter/gi, "e")
@@ -63,19 +50,21 @@ function descriptografar() {
 }
 
 function alerta() {
-  alert('Alerta disparado com sucesso.');
+  alert("Alerta disparado com sucesso.");
 }
 
 function copiar() {
-  var content = copiarTexto.value
+  var content = copiarTexto.value;
 
-  if(content != "") {
-    navigator.clipboard.writeText(content).then(() => {
-      alert('deseja copiar essa frase?');
-    }).catch((erro) => {
-      alert('regra invalida')
-    })
+  if (content != "") {
+    navigator.clipboard
+      .writeText(content)
+      .then(() => {
+        alert("deseja copiar essa frase?");
+      })
+      .catch((erro) => {
+        alert("regra invalida");
+      });
   } else {
-
   }
 }

@@ -31,14 +31,15 @@
     <form action="">
       <h3 id="alert" class="alert"><em>Apenas letras minúsculas, sem acento</em></h3> 
       <input class="text-input" type="text" name="input-texto" id="input-entrada" placeholder="Insira uma frase para criptografar!">
-      <input class="btn" type="submit" value="criptografar" id="btn-criptografar">
-      <input class="btn" type="submit" value="descriptografar" id="btn-descriptografar">
+      <input onclick="criptografador()" class="btn" type="button" value="criptografar" id="btn-criptografar">
+
+      <input class="btn" onclick="descriptografar()" type="button" value="descriptografar" id="btn-descriptografar">
     </form>
   </div>
   <div class="msg box">
     <h3 id="sucesso">Mensagem criptografada</h3>
     <input class="input-texto" type="text" id="copiar-text" placeholder=" Resultado"></input>
-    <input class="button" type="submit" value="copiar" id="input-saida">
+    <input class="button" onclick="copiar()" type="button" value="copiar" id="input-saida">
   </div>
 
 </main>
