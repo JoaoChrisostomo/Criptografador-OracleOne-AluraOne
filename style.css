@@ -1,14 +1,47 @@
+#valido {
+  display: none;
+}
+
 * {
-  margin: 0, 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --cor-primaria-criptografar: rgb(5, 8, 7);
+  --cor-secundaria-criptografar: rgb(66, 12, 88);
+}
+
 body {
-  animation: gradient 10s ease infinite;
-  background-image: linear-gradient(-45deg, #ee7752,  #e73C7e, #23a6d5, #23d5ab);
+  animation: colors 8s ease infinite;
+  background-image: linear-gradient(45deg, #ee7752, #ef4ef5, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
   font-family: sans-serif;
   color: rgb(0, 0, 0);
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+
+  }
+
+  50% {
+    background-position: 100% 50%;
+
+  }
+
+  100% {
+    background-position: 0% 50%;
+
+  }
 }
 
 .main {
@@ -20,31 +53,43 @@ body {
 }
 
 .titulo {
-  padding: 50px;
+  padding: px;
   margin: auto;
   text-align: center;
+  font-size: 60px;
+  font-weight: 400;
 }
 
-.box{
+.box {
   width: 400px;
   height: 350px;
   padding: 50px;
   margin: 0 10px 0 10px;
   box-shadow: 2px 2px 2px 1px rgba(2, 1, 8, 0.2);
-  background-image: linear-gradient(-45deg, #2B86C5,  #784BA0, #23a6d5, #23d5ab);
+  background-image: linear-gradient(-45deg, #2B86C5, #784BA0, #23a6d5, #23d5ab);
   border-radius: 0.5em;
   text-align: center;
   justify-content: center;
+  box-shadow: 0 3px 3px 1px rgb(0, 0, 0);
 }
 
 .btn {
   border: 2px;
-  color: white;
   font-weight: bold;
-  background-image: linear-gradient(-45deg, #21bdb0,  #500e4d, #c81fce, #e740af);
+  background-image: linear-gradient(-45deg, #21bdb0, #500e4d, #c81fce, #e740af);
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 25px;
   border-radius: 0.5em;
+  width: 200px;
+  cursor: pointer;
+  color: var(--cor-primaria-criptografar);
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0);
+  font-size: 15px;
+}
+
+.btn:hover {
+  transition: 0.3s all;
+  transform: scale(1.2);
 }
 
 .text-input {
@@ -54,34 +99,52 @@ body {
   padding: 0.5em;
   width: 100%;
   height: 50px;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0);
+  margin-top: 20px;
 }
+
 .redes-sociais {
   text-align: center;
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 50px;
 }
+
+.redes-sociais a {
+  position: relative;
+  width: 70px;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+
 .texto h2 {
   text-align: center;
+  font-size: 40px;
 }
 
 .texto p {
   text-align: center;
+  font-size: 20px;
 }
 
-.texto nav{
+.texto nav {
   text-align: center;
+  font-size: 20px;
 }
-.s-m{
+
+.s-m {
   transform: translate(-530%);
 }
 
- a{
+a {
   display: inline-flex;
   width: 40px;
   height: 40px;
-  background: #fbf6f6;
-  color: black;
-  margin: 0 3px;
+  background: linear-gradient(-45deg, #21bdb0, #500e4d, #c81fce, #e740af);
+  color: rgba(255, 255, 255, 0.50);
+  margin: 0 20px;
   border-radius: 100%;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 2px 1px rgb(5, 5, 4);
   align-items: center;
   justify-content: center;
   transition: 0.5s;
@@ -90,19 +153,11 @@ body {
   text-align: center;
 }
 
-.s-m a:hover{
-  background: #3042ec;
+a:hover {
+  transform: scale(2.0);
 }
 
-.s-ma i{
-  transition: 0.5s all;
-}
-
-.s-m a:hover > i{
-  transform: scale(1.4)rotate(26deg);
-}
-
-.projeto h2{
+.projeto h2 {
   position: absolute;
   top: 70%;
   left: 90%;
@@ -117,4 +172,57 @@ footer {
   text-align: center;
   align-items: center;
   padding: 20px;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0);
+  font-size: 15px;
+}
+
+.input-texto {
+  border-radius: 0.5em;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-top: 60px;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0);
+
+}
+
+.button {
+  border: 2px;
+  font-weight: bold;
+  background-image: linear-gradient(-45deg, #21bdb0, #500e4d, #c81fce, #e740af);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 0.5em;
+  width: 160px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--cor-primaria-criptografar);
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0);
+  font-size: 15px;
+}
+
+.button:hover {
+    transition: 0.3s all;
+    transform: scale(1.2);
+}
+
+.alert {
+  opacity: 0%;
+}
+
+.alert-red {
+  background-image: linear-gradient(-45deg, #21bdb0, #500e4d, #c81fce, #420a30);
+  font-weight: bold;
+  opacity: 100%;
+}
+
+#sucesso{
+  display: none;
+  font-weight: bold;
+}
+
+.success{
+  display: flex;
+  opacity: 100%;
 }
